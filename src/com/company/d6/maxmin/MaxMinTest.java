@@ -1,14 +1,15 @@
 package com.company.d6.maxmin;
-
-import com.company.d6.maxmin.MaxMin;
-
 import java.util.Scanner;
 
 public class MaxMinTest {
 
     public static void main(String[] args) {
-        MaxMin[] maxMin =  get3MaxMin();
-        printMaxMin(maxMin);
+//        MaxMin[] maxMin =  get3MaxMin();
+//        printMaxMin(maxMin);
+        MaxMin maxMin1 = new MaxMin();
+        maxMin1.max = 5;
+        maxMin1.min = 1;
+        Printers.printMaxMin(maxMin1);
     }
 
     public static MaxMin[] get3MaxMin(){
