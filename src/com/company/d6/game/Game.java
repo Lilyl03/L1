@@ -26,14 +26,22 @@ public class Game {
 //        System.out.println(game1.shootCount);
 //        System.out.println(game2.shootCount);
 //        System.out.println(game3.shootCount);
-        game1.printShootCount();
-        game2.printShootCount();
-        game3.printShootCount();
+//        game1.printShootCount();
+//        game2.printShootCount();
+//        game3.printShootCount();
     }
-    public void printShootCount(){
-        System.out.println(shootCount);
+
+    //    public void printShootCount(){
+//        System.out.println(shootCount);
+//    }
+//    public void printShootCountForClass(){
+//        System.out.println(shootCount);
+//    }
+    public void print() {
+        System.out.println(getPrintString());
     }
-    public void printShootCountForClass(){
-        System.out.println(shootCount);
+
+    public String getPrintString() {
+        return "name: " + name + " " + "shoot: " + shootCount;
     }
 }
