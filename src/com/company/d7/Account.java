@@ -1,7 +1,5 @@
 package com.company.d7;
 
-import javax.accessibility.AccessibleAction;
-
 public class Account {
     double money;
 

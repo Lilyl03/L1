@@ -10,7 +10,7 @@ public class GameTest {
         Player player1 = new Player();
         player1.userName =  "aca";
         player1.games = gameArray;
-        //player1.print();
-        System.out.println(player1.getPrintString());
+        player1.print();
+        //System.out.println(player1.getPrintString());
     }
 }

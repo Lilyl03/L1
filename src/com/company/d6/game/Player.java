@@ -7,7 +7,7 @@ public class Player {
     public static void main(String[] args) {
 
     }
-    public void print(){
+    public  void print(){
         System.out.println("username: " + userName );
         for(int i = 0; i< games.length; i++) {
             System.out.println("game : " + i);
