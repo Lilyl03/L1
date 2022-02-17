@@ -1,4 +1,4 @@
-package com.company.d9.car.numbers;
+package com.company.d9.numbers;
 
 public class Number {
     private int number1;

@@ -1,4 +1,4 @@
-package com.company.d8;
+package com.company.d8.snake;
 
 import java.util.Scanner;
 

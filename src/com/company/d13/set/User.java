@@ -16,4 +16,21 @@ public class User {
     public String getLastname() {
         return lastname;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof User)) return false;
+
+        User user = (User) o;
+
+        return user.firstname.equals(this.firstname) && user.lastname.equals(this.lastname);
+    }
+
+    @Override
+    public String toString() {
+        return
+                "firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'';
+    }
 }

@@ -1,4 +1,4 @@
-package com.company.d13;
+package com.company.d13.figure;
 
 public class Figure {
     private double width;

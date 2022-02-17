@@ -1,4 +1,4 @@
-package d11;
+package com.company.d11.vehicle;
 
 public class SafeVehicle {
     private final VehicleType type;

@@ -1,4 +1,4 @@
-package com.company.d7;
+package com.company.d7.bank;
 
 public class Bank {
         String name;

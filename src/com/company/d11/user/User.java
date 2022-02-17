@@ -1,6 +1,4 @@
-package d11;
-
-import com.company.d2.Main;
+package com.company.d11.user;
 
 public class User {
     private final String name;

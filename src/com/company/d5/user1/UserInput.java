@@ -1,4 +1,4 @@
-package com.company.d5;
+package com.company.d5.user1;
 
 import java.util.Scanner;
 
