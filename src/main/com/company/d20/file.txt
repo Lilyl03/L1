@@ -1,0 +1,4 @@
+heap@ bajanvac e young ev old-ic;
+young bajanvuma Eden, Survival0(S0), Survival1(S1);
+stexcvuma Eden-um
+vorosh jamanak heto texapoxvuma S0 heto vo
