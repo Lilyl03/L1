@@ -1,9 +1,13 @@
 package com.company.d23.Timer;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
 import java.util.Scanner;
 
 public class Timer {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
+        System.setErr(new PrintStream("C:\\Users\\LUser\\IdeaProjects\\L1\\src\\main\\com\\company\\d23\\Timer\\timer.txt"));
         Timer timer = new Timer();
         timer.start();
         Scanner scanner = new Scanner(System.in);
@@ -12,6 +16,7 @@ public class Timer {
             int number = scanner.nextInt();
             if(number == -1){
                 timer.stop();
+                break;
             }
         }
     }
@@ -28,7 +33,7 @@ public class Timer {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                    System.out.println(i++);
+                    System.err.println(i++);
                 }
             }
         }).start();

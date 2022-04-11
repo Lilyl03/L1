@@ -7,9 +7,10 @@ import java.io.PrintWriter;
 
 public class PrinterMain {
     public static void main(String[] args) throws FileNotFoundException {
-        String filename = "C:\\Users\\LUser\\IdeaProjects\\L1\\src\\main\\com\\company\\d22\\file.txt";
+        String filename = ".\\file.txt";
         PrintWriter printWriter = new PrintWriter(new FileOutputStream(filename,true));
         printWriter.print("12");
         printWriter.close();
     }
 }
+
