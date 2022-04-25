@@ -16,3 +16,16 @@ insert into users(first_name, second_name) values ('John', 'Jack');
 \q
 exit
 docker stop id1, id2 , ...
+sudo docker run -d -p 8080:5432 postgres:9.6.12
+alter table numbers add column price int;
+update numbers set price=0;
+alter table numbers alter column price set not null;
+alter table number_owners add constraint fk_number_owners_number_id foreign key(number_id) references numbers (id);
+alter table number_owners rename column user_id to user_ssn;
+select no.id, no.user_ssn  from number_owners no;
+ select no.id from number_owners no;
+select * from number_owners no;
+select * from number_owners no inner join numbers n on n.id= no.number_id;
+select no.user_ssn, n.number  from number_owners no inner join numbers n on n.id= no.number_id;
+select no.user_ssn, n.number  from number_owners no inner join numbers n on n.id= no.number_id where no.user_ssn = 2;
+select no.* from number_owners no inner join numbers n on n.id= no.number_id where no.user_ssn = 2;
