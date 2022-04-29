@@ -20,7 +20,11 @@ public class Main {
 //        userRepository.save(new User("First Name", "Second Name"));
         UserService userService = new UserServiceImpl(userRepository);
         for (int i = 0; i < 100; i++) {
-            userService.create(new CreateUserParams("first " + i, "second " + i));
+            userService.create(new CreateUserParams(
+                    "username" + i,
+                    "first " + i,
+                    "second " + i));
         }
+        System.out.println(userService.getByUserName("username1"));
     }
 }

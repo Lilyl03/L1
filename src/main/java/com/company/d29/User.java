@@ -1,24 +1,65 @@
 package com.company.d29;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 @Table(name = "USERS")
 public class User {
-    public User( String firstName, String secondName) {
+    public User( String username,String firstName, String secondName) {
         this.firstName = firstName;
         this.secondName = secondName;
+        this.username = username;
     }
 
     public User() {
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", secondName='" + secondName + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return Objects.equals(id, user.id) && Objects.equals(username, user.username) && Objects.equals(firstName, user.firstName) && Objects.equals(secondName, user.secondName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, username, firstName, secondName);
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "first_name")
+
+    @Column(name = "username", unique = true, nullable = false)
+    private String username;
+
+    @Column(name = "first_name", nullable = false)
     private String firstName;
+
+    @Column(name = "second_name", nullable = false)
+    private String secondName;
+
 
     public Long getId() {
         return id;
@@ -44,6 +85,4 @@ public class User {
         this.secondName = secondName;
     }
 
-    @Column(name = "second_name")
-    private String secondName;
 }
